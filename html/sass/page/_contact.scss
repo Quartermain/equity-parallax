@@ -1,0 +1,57 @@
+.slider-contact {
+	background: url("../images/img-contact.jpg") no-repeat left top;
+	min-height: 480px;
+}
+
+.contact-info {
+	background: $c-gray;
+	padding: 70px 0;
+	.content-info {
+		@include clearfix();
+		color: $c-white;
+		.txt-contact {
+			text-align: right;
+			width: 46%;
+			float: left;
+			font-size: $font-size-base*2;
+			font-weight: $font-weight-bold;
+			text-transform: uppercase;
+		}
+		.txt-info {
+			text-align: left;
+			width: 49%;
+			float: left;
+			border-left: solid 3px $c-white;
+			margin-left: 4%;
+			.email {
+				text-decoration: none;
+				color: $c-white;
+			}
+			ul {
+				list-style: none;
+			}
+		}
+	}
+}
+
+.map-info {
+	background: $c-black;
+	padding: 20px 0;
+	margin: 0 auto;
+	text-align: center;
+}
+
+// About us
+
+
+
+.aboutus {
+	.content-team {
+		border-right: solid 2px $c-white;
+		font-size: 30px;
+	}
+	.service {
+		background: $c-black;
+	}
+
+}

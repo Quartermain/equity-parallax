@@ -1,0 +1,40 @@
+.our-people{
+	&.service-people {
+		background: #44a48b;
+		.main-our-people {
+			max-width: 1000px;
+			padding-bottom: 0;
+			margin: 0 auto;
+			.people-person .popup-our {
+				padding: 15px;
+				.content-people,
+				.title-name,
+				.bcom {
+					font-size: $font-size-base;
+				}
+			}
+		}
+	}
+}
+
+.content-sv-people {
+	background: #2b2b2b;
+	padding-top: 55px;
+	padding-bottom: 40px;
+	color: $c-white;
+	font-size: $font-size-base + 2;
+	font-weight: $font-weight-bold;
+	color: #e1e1e1;
+	.title-caption {
+		font-size: $font-size-base + 10;
+		text-transform: uppercase;
+		color: $c-white;
+	}
+	.title-people {
+		color: $c-white;
+	}
+	.cols-two .col-two {
+		width: 50%;
+		margin-left: 4%;
+	}
+}
