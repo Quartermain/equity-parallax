@@ -6,6 +6,9 @@
 .contact-info {
 	background: $c-gray;
 	padding: 70px 0;
+	@include mobi-landscape{
+		display: none;
+	}
 	.content-info {
 		@include clearfix();
 		color: $c-white;
@@ -39,6 +42,42 @@
 	padding: 20px 0;
 	margin: 0 auto;
 	text-align: center;
+	@include mobi-landscape{
+		display: none;
+	}
+}
+
+.contact-page {
+	.contact-us {
+		.col-lager {
+			display: block;
+			.title-contact {
+				font-size: 18px;
+			}
+			.txt-contact-mobile {
+				display: none;
+				@include mobi-landscape{
+					display: block;
+					text-align: center;
+					font-size: $font-size-base *2;
+					text-transform: uppercase;
+				}
+			}
+			.form-enquiry {
+				.write-area {
+					padding-left: 0;
+				}
+			}
+		}
+		.col-small {
+			.title-contact {
+				display: none;
+			}
+			.content-left {
+				margin-top: 20px;
+			}
+		}
+	}
 }
 
 // About us

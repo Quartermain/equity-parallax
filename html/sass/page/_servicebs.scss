@@ -8,7 +8,11 @@
 	min-height: 480px;
 }
 
-
+.servicebs {
+	.parallax {
+		display: none;
+	}
+}
 
 .business-service,
 .business-service2 {
@@ -17,6 +21,9 @@
 	font-size: $font-size-base + 2;
 	font-weight: $font-weight-bold;
 	padding: 20px 0 40px;
+	@include mobi-landscape{
+		padding-top: 0;
+	}
 	ul {
 		padding-left: 15px;
 		margin: 0;
@@ -27,17 +34,32 @@
 	color: $c-white;
 	font-size: $font-size-base + 2;
 	text-decoration: underline;
+	display: block;
+	@include mobi-landscape{
+		display: none;
+	}
 }
 
 .header-service {
 	color: $c-blue;
 	font-size: $font-size-base *2 - 2;
 	text-transform: uppercase;
+	margin-bottom: 20px;
+	@include mobi-landscape{
+		font-size: $font-size-base + 6;
+		position: relative;
+	}
 	.txt-header {
 		margin-left: 30px;
 		display: inline-block;
+		@include mobi-landscape{
+			margin-left: 10px;
+			position: absolute;
+			font-size: 16px;
+			left: 65px;
+			top: 20px;
+		}
 	}
-	margin-bottom: 20px;
 }
 
 .business-service2 {
@@ -45,6 +67,20 @@
 	padding-top: 40px;
 	.cols-two {
 		margin-bottom: 75px;
+	}
+	.header-service:nth-child(1) {
+		@include mobi-landscape{
+			background: #000;
+			margin: 0 -10px;
+			padding: 10px;
+		}
+	}
+	.header-service:nth-child(2) {
+		@include mobi-landscape{
+			background: #1b171c;
+			margin: 0 -10px;
+			padding: 10px;
+		}
 	}
 }
 

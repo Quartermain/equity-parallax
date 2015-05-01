@@ -22,10 +22,21 @@
 }
 .back-top{
 	@include use-sprite("back-top");
+	@include mobi-landscape{
+		display: none;
+	}
 }
 .finna-manage{
 	@include use-sprite("finna-manage");
 }
 .ass{
 	@include use-sprite("ass");
+}
+
+.hamberger-icon{
+	@include use-sprite("hamberger-icon");
+}
+
+.icon-call{
+	@include use-sprite("icon-call");
 }
