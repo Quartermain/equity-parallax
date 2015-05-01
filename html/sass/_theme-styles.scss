@@ -19,6 +19,9 @@ img {
 	max-width: 1000px;
 	margin: 0 auto;
 	padding: 0 55px;
+	@media (max-width: $screen-xs-max) {
+		padding: 0 10px;
+	}
 }
 
 .header{
@@ -39,6 +42,9 @@ img {
 .menu-links {
 	background-color: $c-black;
 	height: 55px;
+	@media (max-width: $screen-xs-max) {
+		display: none;
+	}
 }
 
 .txt-success {
@@ -61,30 +67,34 @@ img {
 	font-size: $font-size-base - 2;
 	font-weight: $font-weight-bold;
 	font-style: italic;
+	@media (max-width: $screen-xs-max){
+		display: none;
+	}
 	a {
 		margin-left: 6px;
 	}
-	.fb{
-		background: url("../images/fb.png") no-repeat left center;
-		height: 35px;
-		width: 35px;
-		display: inline-block;
-		vertical-align: middle;
-	}
-	.tw{
-		background: url("../images/tw.png") no-repeat left center;
-		height: 35px;
-		width: 35px;
-		display: inline-block;
-		vertical-align: middle;
-	}
-	.li{
-		background: url("../images/li.png") no-repeat left center;
-		height: 35px;
-		width: 35px;
-		display: inline-block;
-		vertical-align: middle;
-	}
+}
+
+.fb{
+	background: url("../images/fb.png") no-repeat left center;
+	height: 35px;
+	width: 35px;
+	display: inline-block;
+	vertical-align: middle;
+}
+.tw{
+	background: url("../images/tw.png") no-repeat left center;
+	height: 35px;
+	width: 35px;
+	display: inline-block;
+	vertical-align: middle;
+}
+.li{
+	background: url("../images/li.png") no-repeat left center;
+	height: 35px;
+	width: 35px;
+	display: inline-block;
+	vertical-align: middle;
 }
 
 .menu-desktop {
@@ -147,6 +157,10 @@ img {
 	.col-three {
 		float: left;
 		width: percentage(33/100);
+		@include mobi-landscape{
+			float: none;
+			width: 100%;
+		}
 	}
 }
 
@@ -158,6 +172,10 @@ img {
 	font-weight: 700;
 	border-right: solid 3px $c-blue-light;
 	padding-right: 50px;
+	@include mobi-landscape{
+		padding-right: 0;
+		border: none;
+	}
 }
 
 .content-we-are {
@@ -165,6 +183,9 @@ img {
 	padding-left: 45px;
 	font-size: $font-size-base + 2;
 	font-weight: 700;
+	@include mobi-landscape{
+		padding-left: 0;
+	}
 }
 
 .content-we-are2{
@@ -172,11 +193,14 @@ img {
 	padding-left: 45px;
 	font-size: $font-size-base + 2;
 	font-weight: 700;
-}
-
-.content-we-are2 {
+	@include mobi-landscape{
+		padding-left: 0;
+	}
 	.more-info{
 		text-align: right;
+		@include mobi-landscape{
+			text-align: left;
+		}
 	}	
 }
 
@@ -186,6 +210,29 @@ img {
 	display: block;
 	font-size: $font-size-base + 2;
 	font-weight: 700;
+	@include mobi-landscape{
+		background: #484848 url("../images/icon-info-mobile.png") no-repeat 10px center;
+		color: $c-white;
+		text-align: left;
+		padding-left: 60px;
+		height: 60px;
+		@include box-sizing(border-box);
+		line-height: 60px;
+		margin: 0 -10px;
+		position: relative;
+		&:before {
+			content: "";
+			width: 0;
+			height: 0;
+			border-left: 20px solid transparent;
+			border-right: 20px solid transparent;
+			border-bottom: 30px solid #484848;
+			position: absolute;
+			top: -30px;
+			left: 50%;
+			margin-left: -15px;
+		}
+	}
 }
 
 .bg-2 {
@@ -199,8 +246,14 @@ img {
 	text-align: center;
 	padding-bottom: 75px;
 	margin-top: -4px;
+	@include mobi-landscape{
+		padding-bottom: 0;
+	}
 	.main-content {
 		padding-top: 45px;
+		@include mobi-landscape{
+			padding-top: 0;
+		}
 	}
 	.title-service {
 		color: $c-blue;
@@ -209,6 +262,13 @@ img {
 		font-weight: 700;
 		margin-top: 35px;
 		margin-bottom: 30px;
+		@include mobi-landscape {
+			text-align: left;
+			margin-left: 150px;
+			text-align: left;
+			padding: 0;
+			padding-top: 25px;
+		}
 	}
 
 	.content-service {
@@ -216,17 +276,31 @@ img {
 		margin-bottom: 65px;
 		font-size: $font-size-base + 2;
 		font-weight: $font-weight-bold;
+		@include mobi-landscape {
+			text-align: left;
+			clear: both;
+			padding-top: 30px;
+		}
 	}
 
 	.txt-service {
 		width: 90%;
 		position: relative;
 		min-height: 390px;
+		@include mobi-landscape{
+			width: 100%;
+			margin-bottom: 0;
+		}
 		.more-info {
 			position: absolute;
 			bottom: 0;
 			left: 50%;
 			@include translate(-50%, 0px);
+			
+			@include mobi-landscape{
+				position: static;
+				@include translate(0, 0);
+			}
 		}
 	}
 	
@@ -248,6 +322,9 @@ img {
 
 .line-bg {
 	border-bottom: solid 2px $c-white;
+	@include mobi-landscape{
+		border-bottom: none;
+	}
 }
 
 .our-people {
@@ -255,17 +332,26 @@ img {
 	.txt-title {
 		background: #49bb9e;
 		margin-bottom: 0;
+		@include mobi-landscape{
+			background: $c-black;
+		}
 	}
 	.main-our-people {
 		@include clearfix();
 		max-width: 1736px;
 		margin: 0 auto;
 		padding-bottom: 155px;
+		@include mobi-landscape{
+			padding-bottom: 0;
+		}
 		.people-person {
 			position: relative;
 			width: percentage(25/100);
 			float: left;
 			cursor: pointer;
+			@include mobi-landscape{
+				width: 50%;
+			}
 			.bg-show-info {
 				display: none;
 			}
@@ -285,6 +371,9 @@ img {
 			.popup-our {
 				padding: 28px;
 				color: $c-white;
+				@include mobi-landscape{
+					padding: 10px;
+				}
 				.title-name {
 					font-size: $font-size-base + 2;
 					text-transform: uppercase;
@@ -299,11 +388,18 @@ img {
 				.content-people {
 					font-size: $font-size-base + 2;
 					font-weight: $font-weight-bold;
+					@include mobi-landscape{
+						display: none;
+					}
 				}
 				.find-out {
 					position: absolute;
 					bottom: 28px;
 					right: 28px;
+					@include mobi-landscape{
+						right: 10px;
+						bottom: 10px;
+					}
 				}
 			}
 		}
@@ -328,10 +424,20 @@ img {
 	.col-small {
 		width: percentage(234/886);
 		float: left;
+		@include mobi-landscape{
+			width: 100%;
+			float: none;
+			text-align: center;
+		}
 	}
 	.col-lager {
 		width: percentage(652/886);
 		float: left;
+		@include mobi-landscape{
+			width: 100%;
+			float: none;
+			display: none;
+		}
 	}
 
 	.content-left {
@@ -350,10 +456,18 @@ img {
 		.col-fiel-left {
 			width: 40%;
 			float: left;
+			@include mobi-landscape{
+				width: 100%;
+				float: none;
+			}
 		}
 		.col-fiel-right {
 			width: 60%;
 			float: left;
+			@include mobi-landscape{
+				width: 100%;
+				float: none;
+			}
 		}
 		input {
 			background: rgba(255,255,255,0.1);
@@ -408,12 +522,19 @@ img {
 	background: #2b2b2b;
 	.link-footer {
 		float: left;
+		@include mobi-landscape{
+			float: none;
+			text-align: center;
+		}
 		a {
 			color: #8f8f8f;
 			line-height: 37px;
 			text-decoration: none;
 			font-size: 12px;
 			font-weight: 700;
+			@include mobi-landscape{
+				font-size: $font-size-base - 4;
+			}
 		}
 	}
 	.webby {
@@ -422,6 +543,10 @@ img {
 		line-height: 37px;
 		font-size: $font-size-base - 2;
 		font-weight: 700;
+		@include mobi-landscape{
+			float: none;
+			display: none;
+		}
 		a {
 			color: #8f8f8f;
 			text-decoration: underline;
@@ -464,4 +589,30 @@ img {
 
 .parallax-3 {
 	background-image: url("../images/bg-3.jpg");
+}
+
+.icon-service {
+	@include mobi-landscape {
+		float: left;
+	}
+}
+
+.bg-mobile {
+	@include mobi-landscape{
+		width: 0;
+		height: 0;
+		border-left: 50px solid transparent;
+		border-right: 50px solid transparent;
+		border-top: 100px solid red;
+	}
+}
+
+.links-share-bottom {
+	display: none;
+	@include mobi-landscape{
+		display: block;
+		a {
+			margin: 0 10px;
+		}
+	}
 }
