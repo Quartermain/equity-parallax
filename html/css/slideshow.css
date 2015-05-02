@@ -41,7 +41,14 @@
 	position: absolute;
 	width:100%;
 }
+.parallax-content-1{
+	height: 350px;
+}
 .content-team p{
 	position:relative;
 	left:-100px;
+}
+
+.txt-service{
+	left:-80px;
 }
