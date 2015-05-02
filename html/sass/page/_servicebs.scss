@@ -52,6 +52,8 @@
 	.txt-header {
 		margin-left: 30px;
 		display: inline-block;
+		color: $c-blue;
+		text-decoration: none;
 		@include mobi-landscape{
 			margin-left: 10px;
 			position: absolute;

@@ -24,7 +24,7 @@
       "prevText": "Previous",   // String: Text for the "previous" button
       "nextText": "Next",       // String: Text for the "next" button
       "maxwidth": "",           // Integer: Max-width of the slideshow, in pixels
-      "navContainer": "",       // Selector: Where auto generated controls should be appended to, default is after the <ul>
+      "navContainer": "auto",       // Selector: Where auto generated controls should be appended to, default is after the <ul>
       "manualControls": "",     // Selector: Declare custom pager navigation
       "namespace": "rslides",   // String: change the default namespace used
       "before": $.noop,         // Function: Before callback
