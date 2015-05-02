@@ -497,11 +497,13 @@ img {
 			}
 		}
 		.col-fiel-right {
-			width: 60%;
+			width: 58%;
 			float: left;
+			margin-left: 2%;
 			@include mobi-landscape{
 				width: 100%;
 				float: none;
+				margin-left: 0;
 			}
 		}
 		input {
