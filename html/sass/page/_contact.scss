@@ -88,9 +88,36 @@
 	.content-team {
 		border-right: solid 2px $c-white;
 		font-size: 30px;
+		@include mobi-landscape {
+			border-right: none;
+			font-size: 24px;
+		}
 	}
 	.service {
 		background: $c-black;
+		@include mobi-landscape {
+			display: none;
+		}
 	}
+	.content-we-are,
+	.content-we-are2 {
+		@include mobi-landscape {
+			display: none;
+		}
+	}
+	.we-are {
+		@include mobi-landscape {
+			background: $c-black;
+			padding-top: 0;
+		}
+	}
+	.service-people {
+		.txt-title {
+			@include mobi-landscape {
+				display: none;
+			}
+		}
+	}
+
 
 }

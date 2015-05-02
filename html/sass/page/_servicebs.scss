@@ -65,23 +65,33 @@
 .business-service2 {
 	background: #555;
 	padding-top: 40px;
+	@include mobi-landscape{
+		padding-bottom: 0;
+	}
 	.cols-two {
 		margin-bottom: 75px;
 	}
-	.header-service:nth-child(1) {
+	.header-service{
 		@include mobi-landscape{
 			background: #000;
 			margin: 0 -10px;
 			padding: 10px;
+			.txt-header {
+				margin-left: 20px;
+			}
+		}
+		+ .header-service{
+			@include mobi-landscape{
+				background: #1b171c;
+				margin: 0 -10px;
+				padding: 10px;
+				.txt-header {
+					margin-left: 20px;
+				}
+			}
 		}
 	}
-	.header-service:nth-child(2) {
-		@include mobi-landscape{
-			background: #1b171c;
-			margin: 0 -10px;
-			padding: 10px;
-		}
-	}
+	
 }
 
 .txt-upperca {

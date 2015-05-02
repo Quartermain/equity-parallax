@@ -29,6 +29,9 @@
 		font-size: $font-size-base + 10;
 		text-transform: uppercase;
 		color: $c-white;
+		@include mobi-landscape{
+			margin-top: 20px;
+		}
 	}
 	.title-people {
 		color: $c-white;
@@ -36,5 +39,45 @@
 	.cols-two .col-two {
 		width: 50%;
 		margin-left: 4%;
+		@include mobi-landscape{
+			width: 100%;
+			margin-left: 0;
+		}
+	}
+}
+
+.display-mobile {
+	display: none;
+	@include mobi-landscape{
+		display: block;
+	}
+}
+
+.people-page {
+	.service-people {
+		@include mobi-landscape{
+			display: none;
+		}
+	}
+	.parallax {
+		@include mobi-landscape{
+			display: none;
+		}
+	}
+	.content-sv-people {
+		@include mobi-landscape{
+			padding-top: 0;
+			.cols-two .col-one {
+				margin: 0 -10px;
+				width: auto;
+			}
+			position: relative;
+			.bg-mobile {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+			}
+		}
 	}
 }
