@@ -41,3 +41,7 @@
 	position: absolute;
 	width:100%;
 }
+.content-team p{
+	position:relative;
+	left:-100px;
+}
