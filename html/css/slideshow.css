@@ -47,3 +47,13 @@
 .txt-service{
 	left:-80px;
 }
+@media screen and (min-width: 991px) {
+  /* line 54, ../sass/_type.scss */
+  .parallax-content img {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    max-width: none;
+  }
+}
